@@ -133,6 +133,26 @@ func ResolveResource(name string) (Resource, error) {
 	return newResource(t), nil
 }
 
+// Resources ...
+// func Resources() []Resource {
+// 	resources := []Resource{}
+// 	seen := []string{}
+// 	for k, v := range typeMap {
+// 		if !stringsutil.FoundInArray(k, seen) {
+// 			if _, ok := v.(Resource); ok {
+// 				fmt.Printf("%#v is a resource\n", v)
+// 				resources = append(resources, newResource(v))
+// 			}
+// 			seen = append(seen, k)
+// 		}
+// 	}
+// 	// h := Hook{}
+// 	// var i interface{} = h
+
+// 	// fmt.Println(i.(Resource))
+// 	return resources
+// }
+
 // Make a new Resource to avoid aliasing problems with ResolveResource.
 // don't use this function. no, seriously.
 func newResource(r interface{}) Resource {

@@ -1,6 +1,8 @@
 package v2
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestResolveResource_GH1565(t *testing.T) {
 	v1, err := ResolveResource("Check")
@@ -22,3 +24,8 @@ func TestResolveResource_GH1565(t *testing.T) {
 		t.Fatal("internal pointer values should differ")
 	}
 }
+
+// func TestResources(t *testing.T) {
+// 	fmt.Printf("%v\n", Resources())
+// 	fmt.Println(len(Resources()))
+// }
